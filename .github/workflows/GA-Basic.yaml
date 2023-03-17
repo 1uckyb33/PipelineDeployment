@@ -13,9 +13,18 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
-    - run: npm ci
-    - run: npm test
-    - run:  npm install
+    
+    - run: npm install
           # TO COMPLETE
+  jobNPMTest: 
+    runs-on: ubuntu-latest
+    needs: jobDemarrage 
+    steps:
+    - uses: actions/checkout@v3
+      name : testNPM
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - run: npm test    
 
 #$GITHUB_WORKSPACE
