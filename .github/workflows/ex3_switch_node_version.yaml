@@ -15,10 +15,13 @@ jobs:
           uses: actions/setup-node@v3
           with:
             node-version: ${{ env.NODE_VERSION}}
-        - name: run test
-        - name: run -v
-          shell: bash
+        - name: run version
+          run: node -v 
+        - name: npminstal_test
           run: |
-            npm install
+            npm install 
             npm test
+          shell: bash
+          
+         
 
