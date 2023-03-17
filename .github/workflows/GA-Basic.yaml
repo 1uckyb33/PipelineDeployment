@@ -17,9 +17,11 @@ jobs:
     - run: npm install 
           # TO COMPLETE
   jobNPMTest: 
-    runs-on: ubuntu-latest
     needs: jobDemarrage 
+    runs-on: ubuntu-latest
+    
     steps:
+      
     - uses: actions/checkout@v3
       name : testNPM
     - uses: actions/setup-node@v3
